@@ -1,0 +1,9 @@
+@import '~@angular/material/theming';
+@include mat-core();
+$FrwkTest-primary: mat-palette($mat-indigo);
+$FrwkTest-accent: mat-palette($mat-pink, A200, A100, A400);
+$FrwkTest-warn: mat-palette($mat-red);
+$FrwkTest-theme: mat-light-theme($FrwkTest-primary, $FrwkTest-accent, $FrwkTest-warn);
+
+@include angular-material-theme($FrwkTest-theme);
+
