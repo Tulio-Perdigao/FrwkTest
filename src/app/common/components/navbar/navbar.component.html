@@ -1,0 +1,16 @@
+<mat-sidenav-container class="example-container" fullscreen >
+  <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()"
+    (mouseleave)="mouseleave()">
+    <mat-nav-list>
+      <mat-list-item>
+        <span class="full-width">Dashboard</span>
+        <mat-icon mat-list-icon>home</mat-icon>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <div class="mainContent">
+      Hello world!
+      <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>
