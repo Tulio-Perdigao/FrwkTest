@@ -1,0 +1,44 @@
+<div class="pageTitle">
+    <h1>Dashboard</h1>
+</div>
+
+<div class="helloContent">
+    <p>
+        Olá! Meu nome é Túlio Mitre Perdigão e estou aplicando para a vaga de desenvolvedor front-end!
+    </p>
+    <p>
+        Normalmente, uma página de dashboard teria históricos de uso, estatísticas, produtos ou informações similares.
+    </p>
+    <p>
+        Como o requisito era apenas listagem de informações, vou usar essa página para explicar como cada parte foi feita.
+        Essa aplicação de teste tem apenas 3 páginas:
+    </p>
+        <ul>
+            <li>
+                Postagens, um conjunto de cards com os autores e título de cada um. É possível interagir com o card para abrir um popup com a escrita e comentários da API.
+                Observa-se que, para fechar o popup, é possível clicar fora de seu conteúdo ou usar a tecla 'ESC' do teclado.
+            </li>
+            <li>
+                Álbuns, também um conjunto de cards com autores e título de cada um. Ao interagir, um popup com imagens de teste é aberto. Ao interagir com a imagem,
+                essa aplicação vai abrir a imagem em maior tamanho em uma nova aba do navegador.
+            </li>
+            <li>
+                To-Dos, uma listagem de itens a serem feitos e itens concluídos. É preciso primeiro selecionar o usuário para obter da API suas tarefas.
+                Foi feito com o componente Drag and Drop do Angular Material. É possível interagir com as listas, arrastando seus itens entre elas.
+            </li>
+        </ul> 
+
+    <p>
+        Uma vez que essa API não permite mudanças em sua base de dados (apenas em memória), não foi feito nenhum fluxo para cadastro, edição ou deleção de itens.
+        Deixei então um exemplo de endpoints para tais ações a nível de código no serviço encontrado em app/common/services/posts.service.ts, apenas para prova de conhecimento.
+    </p>
+    <p>
+        As páginas podem ser acessadas pelo menu lateral ou pelos botões abaixo. Obrigado!
+    </p>
+</div>
+
+<div class="dashboardButtons">
+    <button class="frwkbtn" (click)="link(1)" mat-raised-button>Postagens</button>
+    <button class="frwkbtn" (click)="link(2)" mat-raised-button>Albuns</button>
+    <button class="frwkbtn" (click)="link(3)" mat-raised-button>To-Dos</button>
+</div>

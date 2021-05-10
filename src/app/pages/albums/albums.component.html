@@ -1,0 +1,13 @@
+<div class="pageTitle">
+    <h1>Álbuns</h1>
+</div>
+
+<div class="albumListContainer">
+    <div class="cardContainer" *ngFor="let card of albumDetailsList">
+        <mat-card class="card" (click)="openDetailsComponent(card)">
+            <mat-card-title>{{card.user.name}}</mat-card-title>
+		    <mat-card-subtitle>{{card.user.email}}</mat-card-subtitle>
+            <div><strong>{{card.album.title}}</strong></div>
+        </mat-card>
+    </div>
+</div>

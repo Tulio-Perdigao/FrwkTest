@@ -23,4 +23,20 @@ export class AlbumsService {
       return err;
     }
   }
+
+  async getAlbum(albumId: number): Promise<Album[]> {
+    try {
+      return this.http.get<Album[]>(this.url + '/albums/' + albumId).toPromise();
+    } catch (err) {
+      return err;
+    }
+  }
+
+  async getAlbumPhotos(albumId: number): Promise<Album[]> {
+    try {
+      return this.http.get<Album[]>(this.url + '/albums/' + albumId + '/photos').toPromise();
+    } catch (err) {
+      return err;
+    }
+  }
 }

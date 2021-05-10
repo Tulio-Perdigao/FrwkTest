@@ -1,0 +1,19 @@
+<div class="detailedPostContainer">
+    <h1>{{data.post.title}}</h1>
+
+    <p>{{data.post.body}}</p>
+
+    <h4>Sobre o autor</h4>
+    <address>
+        Escrito por {{data.user.name}}<br>
+        Visite-nos em: {{data.user.address.street}}, {{data.user.address.suite}}, {{data.user.address.city}} - {{data.user.address.zipcode}} <br>
+        {{data.user.email}}<br>
+    </address>
+
+    <h4>Comentários</h4>
+    <mat-card class="card" *ngFor="let comment of commentList">
+        <mat-card-subtitle>#{{comment.id}}</mat-card-subtitle>
+        <p>{{comment.body}}</p>
+        <cite>{{comment.name}} - {{comment.email}}</cite>
+    </mat-card>
+</div>

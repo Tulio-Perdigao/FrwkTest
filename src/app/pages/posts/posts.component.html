@@ -1,0 +1,16 @@
+<div class="pageTitle">
+    <h1>Postagens</h1>
+</div>
+
+<div class="cardListContainer">
+    <div class="cardContainer" *ngFor="let card of postDetailsList">
+        <mat-card class="card" (click)="openDetailsComponent(card)">
+            <div mat-card-avatar class="defaultUserAvatar"></div>
+            <mat-card-title>{{card.user.name}}</mat-card-title>
+		    <mat-card-subtitle>{{card.user.email}}</mat-card-subtitle>
+            <div><strong>{{card.post.title}}</strong></div>
+            <div>Postagem #{{card.post.id}}</div>
+        </mat-card>
+    </div>
+</div>
+

@@ -2,15 +2,34 @@
   <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()"
     (mouseleave)="mouseleave()">
     <mat-nav-list>
-      <mat-list-item>
-        <span class="full-width">Dashboard</span>
-        <mat-icon mat-list-icon>home</mat-icon>
-      </mat-list-item>
+      <a [routerLink]="['/dashboard']">
+        <mat-list-item>
+          <span class="full-width">Dashboard</span>
+          <mat-icon mat-list-icon>home</mat-icon>
+        </mat-list-item>
+      </a>
+      <a [routerLink]="['/posts']">
+        <mat-list-item>
+          <span class="full-width">Postagens</span>
+          <mat-icon mat-list-icon>format_list_bulleted</mat-icon>
+        </mat-list-item>
+      </a>
+      <a [routerLink]="['/albums']">
+        <mat-list-item>
+          <span class="full-width">Albuns</span>
+          <mat-icon mat-list-icon>table_chart</mat-icon>
+        </mat-list-item>
+      </a>
+      <a [routerLink]="['/todos']">
+        <mat-list-item>
+          <span class="full-width">ToDos</span>
+          <mat-icon mat-list-icon>notes</mat-icon>
+        </mat-list-item>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
 
   <div class="mainContent">
-      Hello world!
       <router-outlet></router-outlet>
   </div>
 </mat-sidenav-container>

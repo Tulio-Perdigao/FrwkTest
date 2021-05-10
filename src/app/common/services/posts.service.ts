@@ -57,7 +57,7 @@ export class PostsService {
     }
   }
 
-  async getComments(postId: number): Promise<Comment[]> {
+  async getCommentsFromPost(postId: number): Promise<Comment[]> {
     try {
       return this.http.get<Comment[]>(this.url + '/posts/' + postId + '/comments').toPromise();
     } catch (err) {

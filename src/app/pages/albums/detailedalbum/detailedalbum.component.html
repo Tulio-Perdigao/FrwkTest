@@ -1,0 +1,14 @@
+<div class="detailedAlbumContainer">
+    <h1>{{data.album.title}}</h1>
+</div>
+
+<div class="photosContainer">
+    <div class="cardContainer" *ngFor="let photo of albumPhotos">
+        <mat-card class="imageCard" >
+            <mat-card-subtitle>{{photo.title}}</mat-card-subtitle>
+            <a [href]="photo.url" target="_blank">
+                <img [src]="photo.thumbnailUrl">
+            </a>
+        </mat-card>
+    </div>
+</div>

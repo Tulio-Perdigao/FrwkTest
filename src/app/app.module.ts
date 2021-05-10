@@ -6,12 +6,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './common/components/header/header.component';
 import { DevComponent } from './common/components/dev/dev.component';
 import { NavbarComponent } from './common/components/navbar/navbar.component';
+import { PostsComponent } from './pages/posts/posts.component';
+import { AlbumsComponent } from './pages/albums/albums.component';
+import { TodosComponent } from './pages/todos/todos.component';
+import { DetailedpostComponent } from './pages/posts/detailedpost/detailedpost.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { MatButtonModule } from '@angular/material';
+import { DetailedalbumComponent } from './pages/albums/detailedalbum/detailedalbum.component';
 
 
 @NgModule({
@@ -19,7 +30,13 @@ import { NavbarComponent } from './common/components/navbar/navbar.component';
     AppComponent,
     HeaderComponent,
     DevComponent,
-    NavbarComponent
+    NavbarComponent,
+    PostsComponent,
+    AlbumsComponent,
+    TodosComponent,
+    DetailedpostComponent,
+    DetailedalbumComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -28,9 +45,15 @@ import { NavbarComponent } from './common/components/navbar/navbar.component';
     HttpClientModule,
     MatIconModule,
     MatListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCardModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatSelectModule,
+    DragDropModule
   ],
   providers: [],
+  entryComponents: [DetailedpostComponent, DetailedalbumComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

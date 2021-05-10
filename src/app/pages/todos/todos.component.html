@@ -1,0 +1,45 @@
+<div class="pageTitle">
+    <h1>To-Dos</h1>
+</div>
+
+
+<div class="todoContent">
+    <mat-card>
+        <mat-form-field appearance="fill">
+            <mat-label>Selecionar usuário</mat-label>
+            <mat-select [(value)]="selectedUser" (selectionChange)="getUserTodos($event)">
+              <mat-option *ngFor="let user of userList" [value]="user.name">
+                {{user.name}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        
+        
+          <div cdkDropListGroup>
+            <div class="example-container">
+              <h2>To do</h2>
+          
+              <div
+                cdkDropList
+                [cdkDropListData]="todoList"
+                class="example-list"
+                (cdkDropListDropped)="drop($event)">
+                <div class="example-box" *ngFor="let item of todoList" cdkDrag>{{item.title}}</div>
+              </div>
+            </div>
+          
+            <div class="example-container">
+              <h2>Done</h2>
+          
+              <div
+                cdkDropList
+                [cdkDropListData]="doneList"
+                class="example-list"
+                (cdkDropListDropped)="drop($event)">
+                <div class="example-box" *ngFor="let item of doneList" cdkDrag>{{item.title}}</div>
+              </div>
+            </div>
+          </div>
+    </mat-card>
+</div>
+

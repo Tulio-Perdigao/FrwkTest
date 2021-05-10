@@ -1,6 +1,7 @@
 export class User {
     id: number;
     username: string;
+    name: string;
     email: string;
     address: Address;
     geo: Geo;
@@ -8,8 +9,9 @@ export class User {
     website: string;
     company: Company;
 
-    constructor(p_id: number, p_username: string, p_email: string, p_address: Address, p_geo: Geo, p_phone: string, p_website: string, p_company: Company) {
+    constructor(p_id: number, p_name: string, p_username: string, p_email: string, p_address: Address, p_geo: Geo, p_phone: string, p_website: string, p_company: Company) {
         this.id = p_id;
+        this.name = p_name;
         this.username = p_username;
         this.email = p_email;
         this.address = p_address;
